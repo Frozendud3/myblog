@@ -29,3 +29,6 @@ Se crearon vistas para inicio de sesion y registro.
 Se definieron vistas para iniciar sesion y registrar nuevo usuario
 Se crearon modelos para que el usuario pueda comentar.
 Se definieron vistas para agregar comentarios a una publicacion
+
+Y sigo trabajando en la aplicación día tras día para generar el front, correctamente.
+ Saludos
