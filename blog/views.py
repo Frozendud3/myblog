@@ -8,6 +8,9 @@ from django.contrib.auth import login, logout
 
 from django.shortcuts import render, redirect
 
+from .forms import CommentForm
+
+
 
 def post_list(request):
     posts = Post.objects.all()
@@ -34,3 +37,16 @@ def register_view(request):
     else:
         form = UserCreationForm()
     return render(request, 'blog/register.html', {'form': form})
+def add_comment(request, post_id):
+    post = (Post, id=post_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.author = request.user
+            comment.save()
+            return redirect('post_detail', post_id=post.id)
+        else:
+        form = CommentForm()
+
