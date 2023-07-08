@@ -29,6 +29,7 @@ Se crearon vistas para inicio de sesion y registro.
 Se definieron vistas para iniciar sesion y registrar nuevo usuario
 Se crearon modelos para que el usuario pueda comentar.
 Se definieron vistas para agregar comentarios a una publicacion
+Se realizaron los comandos para actualizar y corregir errores de codigo para poder pushear al repositorio de git hub, tales como: git push origin main // git add . // git commit - m "2do commit"
 
 Y sigo trabajando en la aplicación día tras día para generar el front, correctamente.
  Saludos
