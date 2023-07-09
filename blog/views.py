@@ -10,6 +10,11 @@ from django.shortcuts import render, redirect
 
 from .forms import CommentForm
 
+from django.views.generic import TemplateView
+
+class HomePageView(TemplateView):
+    template_name = 'index.html'
+
 
 
 def post_list(request):

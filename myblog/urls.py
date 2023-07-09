@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blog.views import post_list, add_comment
+from .views import (HomePageView,
+                   )
 
 urlpatterns = [path('admin/', admin.site.urls),
-    path('post/<int:post_id>/comment/', add_comment, name='add_comment'),]
+    path('post/<int:post_id>/comment/', add_comment, name='add_comment'),
+    path('', HomePageView.as_view(), name='home'),]
     
