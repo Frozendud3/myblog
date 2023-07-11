@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.db.models.query import QuerySet
 from django.utils import timezone
 
+
+
 class Category(models.Model):
     name = models.CharField(max_length=100)    
    
@@ -11,6 +13,8 @@ class Category(models.Model):
         return self.name
 
 class Post(models.Model):
+
+    
    
     class PostObjects(models.Manager):
         def get_queryset(self) -> QuerySet:
@@ -32,11 +36,7 @@ class Post(models.Model):
     objects = models.Manager()
     postobjects = PostObjects()
 
-    class Meta:
-        ordering = ('-published',)
-
-    def __str__(self):
-        return self.tittle    
+   
     
 
 
