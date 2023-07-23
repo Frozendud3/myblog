@@ -1,1 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Frozendude - Blog{% endblock title %}
+{% block content %}
 Blog Homepage
+
+
+{%for post in posts %}
+<a href="{%url 'blog:post-detail' slug=post.slug%}">
+
+{{post.title}}
+{{post.excerpt|truncatechars:50}}
+</a>
+
+{% endfor %}
+
+
+{% endblock content %}
+
